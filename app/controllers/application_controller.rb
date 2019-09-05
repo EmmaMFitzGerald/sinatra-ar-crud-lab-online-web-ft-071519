@@ -16,7 +16,6 @@ class ApplicationController < Sinatra::Base
   end 
 
   post '/articles' do 
-    # erb :show
     article = Article.create(params)
     erb :show
   end 
@@ -33,7 +32,7 @@ class ApplicationController < Sinatra::Base
   
   get '/articles/:id/edit' do  
     @article = Article.find(params[:id])
-    erb  :edit 
+    erb :edit 
   end 
   
   patch '/articles/:id' do 
