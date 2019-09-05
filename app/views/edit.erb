@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <form action='/articles<%=@article.id%>' method='post'>
+    <form action='/articles/<%=@article.id%>' method='post'>
       <input id="hidden" type="hidden" name="_method" value="PATCH">
       <label for="title">Title: </label>
       <input id= 'title' type="text" name="article[title]" value="<%=@article.title%>"/>
