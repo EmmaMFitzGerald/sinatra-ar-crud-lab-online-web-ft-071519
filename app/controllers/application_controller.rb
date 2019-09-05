@@ -10,7 +10,10 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
   end
-  
+
+  get 'articles/new' do 
+  end 
+
   post '/articles' do 
     # erb :show
     article = Article.create(params)
