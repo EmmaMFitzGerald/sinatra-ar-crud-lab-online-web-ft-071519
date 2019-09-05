@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get 'articles/new' do 
-    
+    erb :new 
   end 
 
   post '/articles' do 
@@ -24,10 +24,6 @@ class ApplicationController < Sinatra::Base
   get '/articles' do 
     @articles = Article.all
     erb :index
-  end 
-  
-  get '/new' do 
-    erb :new
   end 
   
   get '/articles/:id' do 
