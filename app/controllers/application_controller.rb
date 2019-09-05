@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
   post '/articles' do 
     # erb :show
     article = Article.create(params)
-    redirect URI.escape("/articles/#{article.id}")
+    erb :show
   end 
   
   get '/articles' do 
