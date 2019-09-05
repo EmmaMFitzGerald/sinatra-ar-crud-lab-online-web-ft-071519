@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
     @article = Article.new(title: params[:title], content: params[:content])
     @article.save
     @articles = Article.all
-    erb :show
+    redirect '/articles/:id'
   end 
   
   get '/articles' do 
