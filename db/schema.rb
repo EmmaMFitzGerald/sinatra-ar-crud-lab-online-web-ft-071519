@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20151201201114) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
-    t.string "content"
+    t.text "content"
   end
 
 end
